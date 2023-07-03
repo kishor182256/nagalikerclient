@@ -15,11 +15,11 @@ const Header = () => {
   };
   const headclasses = headerStyles();
 
-  const user =  localStorage.getItem("user");
+  // const user =  localStorage.getItem("user");
 
-  let username = user?.split("@")[0];
-  let capitalizedUsername =
-    username?.charAt(0).toUpperCase() + username?.slice(1);
+  // let username = user?.split("@")[0];
+  // let capitalizedUsername =
+  //   username?.charAt(0).toUpperCase() + username?.slice(1);
 
   useEffect(() => {
     navigate("/register-doctor");
@@ -209,10 +209,10 @@ const Header = () => {
             }}
             onClick={logout}
           >
-            <span>{capitalizedUsername}</span>
+            <span>Admin</span>
             <span>Admin</span>
           </div>
-            <p style={{color:"#FFFFFF",marginLeft:"20px",fontWeight:"bold"}}>{capitalizedUsername.charAt(0)}</p>
+            <p style={{color:"#FFFFFF",marginLeft:"20px",fontWeight:"bold"}}>Admin</p>
         </div>
       </div>
     </div>
