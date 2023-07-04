@@ -42,7 +42,13 @@ const App = () => {
   const [token, setToken] = useState(localStorage.getItem("logintoken"));
 
   useEffect(() => {
-    setToken(localStorage.getItem("logintoken"));
+     const timer = setTimeout(() => {
+      setToken(localStorage.getItem("logintoken"));
+     },4000)
+
+     return () => {
+      clearTimeout(timer)
+     }
   }, []);
 
   return (

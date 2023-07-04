@@ -16,7 +16,7 @@ const Login = () => {
 
   const dispatch = useDispatch();
   const data = useSelector((state) => state.user.token);
-  console.log("data",data?.admin?.email);
+  console.log("data",data);
 
   const [apidata, setData] = useState();
   const navigate = useNavigate();
